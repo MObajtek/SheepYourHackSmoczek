@@ -6,17 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
 
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/topToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@color/colorAccent"
+            app:titleEnabled="false">
+
+        </android.support.design.widget.CollapsingToolbarLayout>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:id="@+id/LstPeriodOptions"
+            android:id="@+id/offersList"
             />
 
         <LinearLayout
@@ -24,21 +39,21 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/LstPeriodOptions" >
+            android:layout_below="@+id/offersList" >
             <Button
-                android:id="@+id/sprzedamButton"
+                android:id="@+id/sellingButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="0dp"
                 android:layout_weight="1"
-                android:text="Sprzedam"/>
+                android:text="selling"/>
             <Button
-                android:id="@+id/kupieButton"
+                android:id="@+id/buyingButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_weight="1"
-                android:text="Kupię" />
+                android:text="buying" />
         </LinearLayout>
 
     </LinearLayout>
